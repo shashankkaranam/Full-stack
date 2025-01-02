@@ -168,83 +168,87 @@
         </div>
     </header>
 
-    <div class="main-container">
+    <form class="main-container" action="/submit" method="POST">
         <div class="card">
             <h2>Let’s begin with your contact information</h2>
             <p>Please provide your details to proceed.</p>
             <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Your name">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
             <label for="email">Your Email</label>
-            <input type="email" id="email" placeholder="example@domain.com">
-            <div style="display: flex; justify-content: space-between;">
-                <button>Cancel</button>
-                <button>Next</button>
-            </div>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
         </div>
 
         <div class="card">
             <h2>What items would you like to donate?</h2>
             <p>Please list the food items and quantities.</p>
-            <label>Donation Type</label>
-            <div style="display: flex; gap: 10px;">
-                <button>A Canned Goods</button>
-                <button>B Fresh Produce</button>
-                <button>C Packaged Foods</button>
-                <button>D Other</button>
-            </div>
+            <label for="donationType">Donation Type</label>
+            <select id="donationType" name="donationType" multiple size="4" required>
+                <option value="Canned Goods">Canned Goods</option>
+                <option value="Fresh Produce">Fresh Produce</option>
+                <option value="Packaged Foods">Packaged Foods</option>
+                <option value="Other">Other</option>
+            </select>
             <label for="quantity">Quantity Needed</label>
-            <select id="quantity">
-                <option>Enter amount...</option>
+            <select id="quantity" name="quantity" required>
+                <option value="">Enter amount...</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
             </select>
             <label for="notes">Additional Notes</label>
-            <textarea id="notes" rows="4" placeholder="Enter additional details"></textarea>
-            <div style="display: flex; justify-content: space-between;">
-                <button>Back</button>
-                <button>Next</button>
-            </div>
+            <textarea id="notes" name="notes" rows="4" placeholder="Enter additional details"></textarea>
         </div>
 
         <div class="card">
             <h2>Let’s confirm your contact details</h2>
             <p>Ensure your information is accurate before proceeding.</p>
             <label for="fullname">What is your full name?</label>
-            <input type="text" id="fullname" placeholder="Full name">
+            <input type="text" id="fullname" name="fullname" placeholder="Full name" required>
             <label>How many items are you donating?</label>
             <div style="display: flex; gap: 10px;">
-                <button>Just a few</button>
-                <button>10-20</button>
-                <button>21-50</button>
-                <button>51-100</button>
-                <button>100+</button>
+                <button type="button" onclick="selectDonationAmount('Just a few')">Just a few</button>
+                <button type="button" onclick="selectDonationAmount('10-20')">10-20</button>
+                <button type="button" onclick="selectDonationAmount('21-50')">21-50</button>
+                <button type="button" onclick="selectDonationAmount('51-100')">51-100</button>
+                <button type="button" onclick="selectDonationAmount('100+')">100+</button>
             </div>
+            <input type="hidden" id="donationAmount" name="donationAmount">
             <label for="location">Your Location</label>
-            <input type="text" id="location" placeholder="Location">
-            <div style="display: flex; justify-content: space-between;">
-                <button>Back</button>
-                <button>Next</button>
-            </div>
+            <input type="text" id="location" name="location" placeholder="Location" required>
         </div>
 
         <div class="card">
             <h2>Confirm your availability for pickup</h2>
             <p>Let us know when you are available.</p>
             <label for="city">City</label>
-            <select id="city">
-                <option>Select city...</option>
+            <select id="city" name="city" required>
+                <option value="">Select city...</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Phoenix">Phoenix</option>
             </select>
             <label for="pickup-date">Preferred pickup date</label>
-            <input type="date" id="pickup-date">
-            <div style="display: flex; justify-content: space-between;">
-                <button>Back</button>
-                <button>Submit Donation</button>
-            </div>
+            <input type="date" id="pickup-date" name="pickup-date" required>
         </div>
-    </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="reset">Back</button>
+            <button type="submit">Submit Donation</button>
+        </div>
+    </form>
 
     <footer>
         <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
         <p>Thank You for Your Support!</p>
         <p>Your donation makes a real difference in our community.</p>
     </footer>
+
+    <script>
+        function selectDonationAmount(amount) {
+            document.getElementById('donationAmount').value = amount;
+        }
+    </script>
 </body>
 </html>
