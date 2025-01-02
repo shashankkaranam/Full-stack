@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nourish Network</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #f4f4f4;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        .card input, .card select, .card textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .grid-item button {
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .grid-item button:hover {
+            background-color: #5d4037;
+        }
+
+        .need-a-meal-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .need-a-meal-button:hover {
+            background-color: #333;
+        }
+
+        .feed-a-meal-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .feed-a-meal-button:hover {
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home Page</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Get Involved</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="need-a-meal-button">Need a Meal</button>
+            <button class="feed-a-meal-button">Feed a Meal</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="card">
+            <h2>Request a Meal</h2>
+            <p>Join us in the fight against hunger by requesting meals for those in need today.</p>
+            <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Learn More</button>
+            <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Sign Up</button>
+        </section>
+
+        <section class="card">
+            <h2>Easily Request Meals for Those in Need Through Our Platform</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://i.postimg.cc/sgYchfXY/swiggy-1562576081.jpg" alt="Streamlined Process">
+                    <h3>Streamlined Process for NGOs to Access Food Assistance</h3>
+                    <p>Our platform simplifies meal requests, ensuring quick and efficient support for NGOs.</p>
+                    <button>Submit</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.postimg.cc/3N9Zcnst/Whats-App-Image-2024-12-26-at-18-59-54-51144469.jpg" alt="Tailored Meal Solutions">
+                    <h3>Receive Tailored Meal Solutions to Meet Your Organization's Needs</h3>
+                    <p>Specify your requirements, and we'll connect you with the right resources.</p>
+                    <button>Request</button>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.postimg.cc/dQTkNHY3/sai-3-1.jpg" alt="Community Collaboration">
+                    <h3>Join Our Community of NGOs Committed to Fighting Hunger</h3>
+                    <p>Collaborate with us to make a significant impact in your community.</p>
+                    <button>Connect</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Get in Touch</h2>
+            <p>We're here to help your organization feed those in need.</p>
+            <form action="/submit" method="POST">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <label for="topic">Select Your Topic</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">Choose one...</option>
+                            <option value="Donations">Donations</option>
+                            <option value="Volunteer">Volunteer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Your Organization Type</label>
+                        <div>
+                            <label><input type="radio" name="orgType" value="Non-Profit" required> Non-Profit</label>
+                            <label><input type="radio" name="orgType" value="School Program"> School Program</label>
+                            <label><input type="radio" name="orgType" value="Food Bank"> Food Bank</label>
+                            <label><input type="radio" name="orgType" value="Community Group"> Community Group</label>
+                            <label><input type="radio" name="orgType" value="Religious Organization"> Religious Organization</label>
+                            <label><input type="radio" name="orgType" value="Other"> Other</label>
+                        </div>
+                    </div>
+                </div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please share details..."></textarea>
+                <label><input type="checkbox" name="terms" required> I agree to Terms</label>
+                <button type="submit" style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Submit</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>FAQs</h2>
+            <p>Find answers to common questions NGOs have when seeking meals for those in need.</p>
+            <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Contact</button>
+            <ul>
+                <li><strong>How do I apply?</strong><p>To apply for meals, NGOs must submit their details through our online form.</p></li>
+                <li><strong>What information is needed?</strong><p>We require basic information such as the NGO's name, contact details, and the number of meals needed.</p></li>
+                <li><strong>How long does it take?</strong><p>Processing your application typically takes 3-5 business days.</p></li>
+                <li><strong>Can I change my request?</strong><p>You can modify your request if your needs change.</p></li>
+                <li><strong>Who can apply?</strong><p>Any registered NGO that supports individuals in need can apply for meals.</p></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <p>Thank You for Your Support!</p>
+        <p>Your donation makes a real difference in our community.</p>
+    </footer>
+</body>
+</html>
