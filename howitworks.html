@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .need-a-meal-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .need-a-meal-button:hover {
+            background-color: #333;
+        }
+
+        .feed-a-meal-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .feed-a-meal-button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .grid-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .grid-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .grid-item h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home Page</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Get Involved</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="need-a-meal-button">Need a Meal</button>
+            <button class="feed-a-meal-button">Feed a Meal</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <section class="section">
+            <h2>How It Works</h2>
+            <p>Nourish Network simplifies food donation by connecting those in need with generous donors. Our platform allows you to easily feed a meal, request a meal, or volunteer to deliver food.</p>
+            <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Learn More</button>
+            <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Sign Up</button>
+        </section>
+
+        <section class="section">
+            <h2>Discover How Nourish Network Connects Food Donors with Those in Need</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://i.postimg.cc/5ySZmXw8/download.jpg" alt="Step 1">
+                    <h3>Step 1: Choose How You Want to Help or Receive Food</h3>
+                    <p>Select from feeding a meal, requesting a meal, or volunteering.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.ibb.co/0DVmjt8/mai-bhi-to.png" alt="Step 2">
+                    <h3>Step 2: Complete Your Profile for a Personalized Experience</h3>
+                    <p>Fill out your details to ensure we meet your needs effectively.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.postimg.cc/VNjNq60F/Whats-App-Image-2024-12-26-at-18-59-55-cf969c45.jpg" alt="Step 3">
+                    <h3>Step 3: Connect and Make a Positive Impact in Your Community</h3>
+                    <p>Engage with others to deliver meals or receive the support you need.</p>
+                </div>
+            </div>
+        </section>
+          <section class="section">
+            <h2>FAQs</h2>
+            <p>Find answers to common questions about how our food donation platform operates.</p>
+            <ul>
+                <li><strong>How do I donate?</strong><p>Just select the 'Feed a Meal' option on our platform, choose the amount you wish to contribute, and complete the payment process. Your donation will directly support local food initiatives.</p></li>
+                <li><strong>Who can receive meals?</strong><p>Anyone in need can receive meals through our platform. We partner with local organizations to ensure that food reaches those who are food insecure.</p></li>
+                <li><strong>How can I volunteer?</strong><p>Sign up on our platform and select the 'Volunteer to Deliver Food' option. You will receive notifications about available delivery opportunities in your area.</p></li>
+                <li><strong>What areas do you serve?</strong><p>We currently serve multiple regions across the country. Our network is continually expanding to reach more communities in need.</p></li>
+                <li><strong>Is my donation tax-deductible?</strong><p>Yes, your donations are tax-deductible! After your contribution, you will receive a receipt via email for your records.</p></li>
+            </ul>
+        </section>
+      
+    </div>
+
+    <footer>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <p>&copy; 2024 Nourish Network. All rights reserved.</p>
+    </footer>
+</body>
+</html>
