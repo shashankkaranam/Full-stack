@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .need-a-meal-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .need-a-meal-button:hover {
+            background-color: #333;
+        }
+
+        .feed-a-meal-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .feed-a-meal-button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-container h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .main-container p {
+            margin-bottom: 20px;
+        }
+
+        .main-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .main-container input, 
+        .main-container select, 
+        .main-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .main-container textarea {
+            resize: none;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main-container button {
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .main-container button:hover {
+            background-color: #5d4037;
+        }
+
+        footer {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home Page</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Get Involved</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="need-a-meal-button">Need a Meal</button>
+            <button class="feed-a-meal-button">Feed a Meal</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h2>Get in Touch</h2>
+        <p>We appreciate your generosity in donating food items.</p>
+        <form action="/submit" method="POST">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="topic">Select a Topic</label>
+            <select id="topic" name="topic" required>
+                <option value="">Choose One...</option>
+                <option value="donation">Donation</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="other">Other</option>
+            </select>
+            <label>Your Role in Donation</label>
+            <div class="radio-group">
+                <label><input type="radio" name="role" value="donor-individual" required> Donor Individual</label>
+                <label><input type="radio" name="role" value="community-group"> Community Group</label>
+                <label><input type="radio" name="role" value="corporate-donor"> Corporate Donor</label>
+                <label><input type="radio" name="role" value="school-organization"> School Organization</label>
+                <label><input type="radio" name="role" value="none"> None</label>
+                <label><input type="radio" name="role" value="other"> Other Entity</label>
+            </div>
+            <label for="message">Notes</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message..."></textarea>
+            <label><input type="checkbox" name="terms" required> I agree to Terms</label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="main-container">
+        <h2>Thank You for Your Generosity!</h2>
+        <p>Your contribution makes a significant impact in the fight against hunger. Please enter the food items and quantities you wish to donate to help those in need.</p>
+        <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Donate</button>
+        <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Learn More</button>
+    </div>
+
+    <footer>
+        <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        <p>&copy; 2024 Nourish Network. All rights reserved.</p>
+    </footer>
+</body>
+</html>
