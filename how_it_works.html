@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #F4A328;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Logo Section */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        /* Navigation Menu */
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Call-to-action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-buttons a {
+            padding: 5px 15px;
+            text-decoration: none;
+            border: 2px solid #000;
+            font-weight: bold;
+            color: #000;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+        }
+
+        .cta-buttons a.feed-meal {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .cta-buttons a:hover {
+            opacity: 0.8;
+        }
+
+        .cta-buttons a:hover.feed-meal {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Content Section */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+
+        .content-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .content-left h1 {
+            font-size: 2.5rem;
+            color: #5A3229;
+        }
+
+        .content-left p {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .content-right {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .content-right p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-right .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .content-right .buttons a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #5A3229;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+        }
+
+        .content-right .buttons a.secondary {
+            background-color: transparent;
+            color: #5A3229;
+            border: 2px solid #5A3229;
+        }
+
+        .content-right .buttons a:hover {
+            background-color: #fff;
+            color: #5A3229;
+        }
+
+        .content-right .buttons a.secondary:hover {
+            background-color: #5A3229;
+            color: #fff;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        
+        .steps-section .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .steps-section .intro h2 {
+            font-size: 2rem;
+            color: #5A3229;
+        }
+
+        .steps-section .intro p {
+            font-size: 1rem;
+            color: #333;
+            max-width: 50%;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+        }
+
+        .step img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            color: #5A3229;
+            margin: 10px 0;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .step a {
+            text-decoration: none;
+            color: #5A3229;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .step a i {
+            margin-left: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content-left,
+            .content-right {
+                padding: 0;
+            }
+
+            .steps-section .intro p {
+                max-width: 100%;
+            }
+
+            .steps {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="#">Home Page</a>
+            <a href="#">About Us</a>
+            <a href="#">Get Involved</a>
+        </nav>
+
+        <!-- Call-to-action Buttons -->
+        <div class="cta-buttons">
+            <a href="#" class="need-meal">Need a Meal</a>
+            <a href="#" class="feed-meal">Feed a Meal</a>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-left">
+            <h1>How It Works</h1>
+        </div>
+        <div class="content-right">
+            <p>Nourish Network simplifies food donation by connecting those in need with generous donors. Our platform allows you to easily feed a meal, request a meal, or volunteer to deliver food.</p>
+            <div class="buttons">
+                <a href="#" class="primary">Learn More</a>
+                <a href="#" class="secondary">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <div class="intro">
+            <h2>Discover How Nourish Network Connects Food Donors with Those in Need</h2>
+            <p>Nourish Network simplifies food donation through a user-friendly platform. Whether you want to feed a meal, need a meal, or volunteer to deliver food, we have you covered. Join us in making a difference in your community today!</p>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <img src="https://i.ibb.co/VDPCTvv/MAI-BHI.png" alt="Step 1">
+                <h3>Step 1: Choose How You Want to Help or Receive Food</h3>
+                <p>Select from feeding a meal, requesting a meal, or volunteering.</p>
+                <a href="#">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="step">
+                <img src="https://i.ibb.co/LtX2146/JUICE.png" alt="Step 2">
+                <h3>Step 2: Complete Your Profile for a Personalized Experience</h3>
+                <p>Fill out your details to ensure we meet your needs effectively.</p>
+                <a href="#">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="step">
+                <img src="https://i.ibb.co/DDJQvMf/3.jpg" alt="Step 3">
+                <h3>Step 3: Connect and Make a Positive Impact in Your Community</h3>
+                <p>Engage with others to deliver meals or receive the support you need.</p>
+                <a href="#">Join Us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- How Feeding a Meal Works Section -->
+<section style="display: flex; justify-content: space-between; align-items: center; padding: 40px; background-color: #fff;">
+    <!-- Left Text Content -->
+    <div style="flex: 1; padding-right: 20px;">
+        <h2 style="font-size: 2.5rem; color: #5A3229; font-weight: bold; margin-bottom: 20px;">How Feeding a Meal Works with Us</h2>
+        <p style="font-size: 1rem; color: #5A3229; line-height: 1.6; margin-bottom: 30px;">
+            Our 'Feed a Meal' process connects generous donors with those in need. Together, we can ensure no one goes hungry.
+        </p>
+
+        <!-- Steps Section -->
+        <div style="display: flex; gap: 40px; margin-bottom: 30px;">
+            <!-- Step One -->
+            <div style="flex: 1; text-align: center;">
+                <i class="fas fa-cube" style="font-size: 2.5rem; color: #5A3229; margin-bottom: 10px;"></i>
+                <h3 style="font-size: 1.2rem; color: #5A3229; font-weight: bold; margin-bottom: 10px;">Step One</h3>
+                <p style="font-size: 0.9rem; color: #5A3229;">Choose a meal to donate and select a recipient.</p>
+            </div>
+            <!-- Step Two -->
+            <div style="flex: 1; text-align: center;">
+                <i class="fas fa-clock" style="font-size: 2.5rem; color: #5A3229; margin-bottom: 10px;"></i>
+                <h3 style="font-size: 1.2rem; color: #5A3229; font-weight: bold; margin-bottom: 10px;">Step Two</h3>
+                <p style="font-size: 0.9rem; color: #5A3229;">Schedule a delivery time that works for you and the recipient.</p>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div style="margin-top: 20px;">
+            <a href="#" style="padding: 10px 20px; text-decoration: none; color: #fff; background-color: #5A3229; border-radius: 5px; font-weight: bold; margin-right: 10px;">Donate</a>
+            <a href="#" style="padding: 10px 20px; text-decoration: none; color: #5A3229; border: 2px solid #5A3229; border-radius: 5px; font-weight: bold;">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Right Image Content -->
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+        <img src="https://i.ibb.co/rHbt9LF/4.jpg" alt="Happy children receiving food" style="width: 90%; height: auto; border-radius: 10px;">
+    </div>
+</section>
+<!-- Need a Meal Program Section -->
+<section style="padding: 40px; background-color: #F9F5F1;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+        <!-- Left Section (Heading) -->
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="font-size: 2.5rem; color: #5A3229; font-weight: bold; margin-bottom: 20px;">
+                Discover How to Easily Access Meals Through Our Need a Meal Program
+            </h2>
+        </div>
+        <!-- Right Section (Description and Icons) -->
+        <div style="flex: 1; min-width: 300px;">
+            <p style="font-size: 1rem; color: #333; line-height: 1.6; margin-bottom: 20px;">
+                If you or someone you know is facing food insecurity, our Need a Meal program is here to help. Simply follow the steps to request meals tailored to your needs.
+            </p>
+            <div style="display: flex; gap: 20px;">
+                <!-- Simple Process -->
+                <div style="text-align: left; flex: 1;">
+                    <i class="fas fa-cube" style="font-size: 2rem; color: #F4A328; margin-bottom: 10px;"></i>
+                    <h3 style="font-size: 1.2rem; color: #5A3229; font-weight: bold; margin-bottom: 5px;">Simple Process</h3>
+                    <p style="font-size: 0.9rem; color: #333;">
+                        Requesting a meal is straightforward and designed for your convenience.
+                    </p>
+                </div>
+                <!-- Get Support -->
+                <div style="text-align: left; flex: 1;">
+                    <i class="fas fa-hands-helping" style="font-size: 2rem; color: #F4A328; margin-bottom: 10px;"></i>
+                    <h3 style="font-size: 1.2rem; color: #5A3229; font-weight: bold; margin-bottom: 5px;">Get Support</h3>
+                    <p style="font-size: 0.9rem; color: #333;">
+                        Our team is dedicated to ensuring you receive the meals you need.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div style="margin-top: 30px; text-align: center;">
+        <img src="https://i.ibb.co/4mMkYrC/5.jpg" alt="Man serving food to children" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px;">
+    </div>
+</section>
+
+</body>
+</html>
+
