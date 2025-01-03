@@ -107,6 +107,27 @@
             font-family: 'Playfair Display', serif;
             margin: 10px 0;
         }
+.faq-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.faq-container h3 {
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faq-container p {
+    color: #333;
+    line-height: 1.6;
+}
+
 
         footer {
             background-color: #ff9800;
@@ -144,7 +165,17 @@
 
     <div class="main-container">
         <section class="section">
-            <h2>How It Works</h2>
+          <h2 style="font-family: 'Roboto', sans-serif; 
+           color: #1e3a8a; 
+           text-transform: uppercase; 
+           letter-spacing: 2px; 
+           border-bottom: 3px solid #4b5563; 
+           padding-bottom: 10px; 
+           display: inline-block;">
+    How It Works
+</h2>
+
+
             <p>Nourish Network simplifies food donation by connecting those in need with generous donors. Our platform allows you to easily feed a meal, request a meal, or volunteer to deliver food.</p>
             <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Learn More</button>
             <button style="background-color: #6d4c41; color: white; padding: 12px 20px; border: none; border-radius: 4px;">Sign Up</button>
@@ -170,23 +201,43 @@
                 </div>
             </div>
         </section>
-          <section class="section">
-            <h2>FAQs</h2>
-            <p>Find answers to common questions about how our food donation platform operates.</p>
-            <ul>
-                <li><strong>How do I donate?</strong><p>Just select the 'Feed a Meal' option on our platform, choose the amount you wish to contribute, and complete the payment process. Your donation will directly support local food initiatives.</p></li>
-                <li><strong>Who can receive meals?</strong><p>Anyone in need can receive meals through our platform. We partner with local organizations to ensure that food reaches those who are food insecure.</p></li>
-                <li><strong>How can I volunteer?</strong><p>Sign up on our platform and select the 'Volunteer to Deliver Food' option. You will receive notifications about available delivery opportunities in your area.</p></li>
-                <li><strong>What areas do you serve?</strong><p>We currently serve multiple regions across the country. Our network is continually expanding to reach more communities in need.</p></li>
-                <li><strong>Is my donation tax-deductible?</strong><p>Yes, your donations are tax-deductible! After your contribution, you will receive a receipt via email for your records.</p></li>
-            </ul>
-        </section>
+<section class="section">
+    <h2>FAQs</h2>
+    <p>Find answers to common questions about how our food donation platform operates.</p>
+
+    <div class="faq-container">
+        <h3>How do I donate?</h3>
+        <p>Just select the 'Feed a Meal' option on our platform, choose the amount you wish to contribute, and complete the payment process. Your donation will directly support local food initiatives.</p>
+    </div>
+
+    <div class="faq-container">
+        <h3>Who can receive meals?</h3>
+        <p>Anyone in need can receive meals through our platform. We partner with local organizations to ensure that food reaches those who are food insecure.</p>
+    </div>
+
+    <div class="faq-container">
+        <h3>How can I volunteer?</h3>
+        <p>Sign up on our platform and select the 'Volunteer to Deliver Food' option. You will receive notifications about available delivery opportunities in your area.</p>
+    </div>
+
+    <div class="faq-container">
+        <h3>What areas do you serve?</h3>
+        <p>We currently serve multiple regions across the country. Our network is continually expanding to reach more communities in need.</p>
+    </div>
+
+    <div class="faq-container">
+        <h3>Is my donation tax-deductible?</h3>
+        <p>Yes, your donations are tax-deductible! After your contribution, you will receive a receipt via email for your records.</p>
+    </div>
+</section>
+
       
     </div>
 
     <footer>
         <img src="https://i.ibb.co/XyC1ksm/image-removebg-preview-5.png" alt="Nourish Network Logo">
         <p>&copy; 2024 Nourish Network. All rights reserved.</p>
+
     </footer>
 </body>
 </html>
